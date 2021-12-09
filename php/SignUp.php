@@ -177,7 +177,7 @@ if (isset($_POST['eposta'])){
       }
       $dbh=null;
   }catch(PDOException $e){
-    if ($e->getCode()==23000)
+    //if ($e->getCode()==23000)
       echo "<script> console.log('".$e->getMessage()."')</script>";
   }
   
