@@ -36,8 +36,8 @@
             $ema = $nireSQLI->query("SELECT * FROM dbt51_user WHERE Eposta = '".$posta."'");
             if (($tabladatuak = $ema->fetch_row()) != null) {
                 //echo "<script> alert('".$posta."')</script>";
-                $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko.";
-                $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu";
+                $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
+                $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
                 $message.="Kodea honakoa da:";
                 $message.="<a href='sw.ikasten.io///php/berreskurapena.php?'";
                 //$headers="From: laguntza@localhost.com";
