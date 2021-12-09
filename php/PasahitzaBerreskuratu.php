@@ -39,7 +39,7 @@
                 $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
                 $message.="Kodea honakoa da:";
-                $message.="<a href='sw.ikasten.io///php/berreskurapena.php?'";
+                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/PasahitzaBerreskuratu.php?'";
                 //$headers="From: laguntza@localhost.com";
                 //$laguntza="laguntza@localhost.com";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);

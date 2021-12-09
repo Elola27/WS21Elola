@@ -11,7 +11,7 @@
             if (document.getElementById("kodea").value=="kodea"){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
-                testua+="<h1> Bete ezazu ondorengo hau <?php echo unencrypt($_GET['eposta'])?> kontuaren pasahitza aldatzeko</h1>";
+                testua+="<h1> Bete ezazu ondorengo hau kontuaren pasahitza aldatzeko</h1>";
                 testua+="<label for ='kodea'> Pasahitz berria:</label> ";
                 testua+="<input type='text' id='kodea' name='kodea'></br>";
                 testua+="<label for ='kodea2'> Errepikatu pasahitza:</label> ";
