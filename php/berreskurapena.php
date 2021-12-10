@@ -25,7 +25,7 @@
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 if (!$zatiak){
-                    echo "Gaizki";
+                    echo openssl_error_string();
                 }
                 $atalak=explode(";",$zatiak);
                 echo $atalak[2];?>";
