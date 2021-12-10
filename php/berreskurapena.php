@@ -33,7 +33,7 @@
         }
     </script>
 </head>
-<body onload="<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola') ?>">
+<body onload="<?php echo "<script> alert('".openssl_decrypt($_GET['i'],'aes128','WS21Elola')."')</script>"  ?>">
 <?php include 'Menus.php'?>
   
   <section class="main" id="s1">
