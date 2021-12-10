@@ -21,9 +21,9 @@
         echo '<span class="right"><a href="SignUp.php">Erregistratu</a></span> &nbsp;';
         echo '<span class="right"><a href="LogIn.php">Login</a></span> &nbsp;';
         echo '<span class="right"><a href="PasahitzaBerreskuratu.php"> Pasahitza ahaztu zait </a></span> &nbsp;';
-        echo '<script src="https://apis.google.com/js/platform.js" async defer></script>';
+        /*echo '<script src="https://apis.google.com/js/platform.js" async defer></script>';
         echo '<meta name="google-signin-client_id" content="1006802611046-rh58g3scanp5kv5kq6u1h94jjp9ig10g.apps.googleusercontent.com">';
-        echo '<div class="g-signin2" data-onsuccess="onSignIn"></div>';
+        echo '<div class="g-signin2" data-onsuccess="onSignIn"></div>';*/
         echo 'Anonimoa &nbsp;';
         echo '<img src="../images/erabiltzaile_anonimoa.png" height=50 width=50"/>';
     }
