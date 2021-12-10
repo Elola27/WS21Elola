@@ -44,7 +44,7 @@
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
                 $kripto=$posta.";".$kodea.";".$iraungi;
                 $kriptografiatua=openssl_encrypt($kripto,'aes128','WS21Elola');
-                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/PasahitzaBerreskuratu.php?i=kriptografiatua'";
+                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/PasahitzaBerreskuratu.php?i=.$kriptografiatua'";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);
                 
                 //$ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".date("Y-m-d H:i:s",$timestamp)."' WHERE Eposta='".$posta."'");

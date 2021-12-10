@@ -15,13 +15,23 @@
         xhro.onreadystatechange=function(){
         //alert("Galdera gehitzen");
             if (xhro.status==200){
-                document.getElementById("galderaEremua").innerHTML=xhro.responseText;
-                //alert("Ongi joan da");
+                //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
+                var galdera=explode(";",xhro.responseText);
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
+                document.getElementById().innerHTML=galdera[0];
             }
         }
-        xhro.open("POST","changeusersstate.php",true);
+        xhro.open("POST","selectQuestion.php",true);
         xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhro.send("eposta="+balioak[0]+"&egoera="+balioak[1]);
+        xhro.send("gaia="+a+"&erantzunda="+b);
         }
     </script>
 </head>
