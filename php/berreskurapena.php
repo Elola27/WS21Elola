@@ -10,6 +10,7 @@
         function zihurtatuEgokitasuna(a){
             
             var eposta,kodea,data,zatiak;
+            alert(a);
             zatiak=a.split(";");
             eposta=zatiak[0];
             kodea=zatiak[1];
