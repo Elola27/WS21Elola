@@ -16,9 +16,19 @@
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
                 echo $atalak[0];?>";
+            kodea="<?php 
+                $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $atalak[1];?>";
+            data="<?php 
+                $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $atalak[2];?>";
             //eposta=zatiak[0];
-            kodea=zatiak[1];
-            data=zatiak[2];
+            //kodea=zatiak[1];
+            //data=zatiak[2];
             alert(kodea);
             alert(eposta);
             alert(document.getElementById("kodea").value);
