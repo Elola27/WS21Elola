@@ -53,7 +53,7 @@
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="submit" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna();">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna();">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
