@@ -35,7 +35,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="<?php echo "<script> alert('".$_GET["i"]."') </script>"?>">
 <?php include 'Menus.php'?>
   
   <section class="main" id="s1">
