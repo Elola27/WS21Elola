@@ -35,19 +35,14 @@
         }
     </script>
 </head>
-<body onload="<?php
-    if (!openssl_decrypt($_GET['i'],'aes128','WS21Elola')){
-        echo "<script> alert('".$_GET["i"]."') </script>";
-    }
-?>">
+<body>
 <?php include 'Menus.php'?>
   
   <section class="main" id="s1">
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="klik" value="Berreskuratu pasahitza" 
-        onclick="zihurtatuEgokitasuna('<?php $get=$_GET['i'];$balio=openssl_decrypt($get,'aes128','WS21Elola'); echo $balio;?>')">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php $get=$_GET['i'];$balio=openssl_decrypt($get,'aes128','WS21Elola'); echo $balio;?>')">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
