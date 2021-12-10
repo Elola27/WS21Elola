@@ -35,7 +35,7 @@
         }
     </script>
 </head>
-<body onload="<?php 
+<body onload="<?php
     if (!openssl_decrypt($_GET['i'],'aes128','WS21Elola')){
         echo "<script> alert('".$_GET["i"]."') </script>";
     }
