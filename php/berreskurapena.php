@@ -15,7 +15,7 @@
             kodea=zatiak[1];
             data=zatiak[2];
             alert(kodea);
-            alert(document.getElementsById("kodea").value);
+            alert(document.getElementById("kodea").value);
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
@@ -42,8 +42,7 @@
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="klik" value="Berreskuratu pasahitza" 
-        onclick="zihurtatuEgokitasuna('<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola');?>');">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola');?>');">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
