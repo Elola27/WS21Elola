@@ -38,13 +38,22 @@
                 //echo "<script> alert('".$posta."')</script>";
                 $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
-                $message.="Kodea honakoa da:";
-                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/PasahitzaBerreskuratu.php?'";
-                //$headers="From: laguntza@localhost.com";
-                //$laguntza="laguntza@localhost.com";
+                $kodea=md5($posta).rand(10);
+                $message.="Kodea honakoa da:".$kodea;
+                $timestamp      = time() + 60 * 60 * 24;
+                $iraungi=date("Y-m-d H:i:s",$timestamp);
+                $kripto=$posta.";".$kodea.";".$iraungi;
+                $kriptografiatua=openssl_encrypt($kripto,'aes128','WS21Elola');
+                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/PasahitzaBerreskuratu.php?i=kriptografiatua'";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);
-                if($mail){
-                    echo "<script> alert('Kodea bidalil da')</script>";
+                
+                //$ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".date("Y-m-d H:i:s",$timestamp)."' WHERE Eposta='".$posta."'");
+                if($mail && $ema2){
+                    echo "<script> alert('".$kodea."')</script>";
+                    echo "<script> alert('".$eposta."')</script>";
+                    echo "<script> alert('".$data."')</script>";
+                    echo "<script> alert(Kodea bidalil da')</script>";
+
                 }else{
                     $errorMessage= error_get_last()['message'];
                     echo "<script> console.log('".$errorMessage."')</script>";

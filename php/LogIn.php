@@ -46,10 +46,10 @@
                                 $_SESSION['eposta']=$bezero->Eposta;
                                 $_SESSION['irudia']=$bezero->Direktorioa;
                                 $_SESSION['rola']=$bezero->Mota;
-                                echo "<script> console.log('".$bezero->Eposta."')</script>";
+                                /*echo "<script> console.log('".$bezero->Eposta."')</script>";
                                 echo "<script> console.log('".$bezero->Egoera."')</script>";
                                 echo "<script> console.log('".$bezero->Pasahitza."')</script>";
-                                echo "<script> console.log('".crypt($datuak["pasahitza"])."')</script>";
+                                echo "<script> console.log('".crypt($datuak["pasahitza"])."')</script>";*/
                                 echo"<script> alert('Ongi etorri webgunera ".$tabladatuak[0]."') </script>";
                                 echo "<script type='text/javascript'> window.location='Layout.php' </script>";
                             }else{
