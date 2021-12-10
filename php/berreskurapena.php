@@ -14,6 +14,8 @@
             eposta=zatiak[0];
             kodea=zatiak[1];
             data=zatiak[2];
+            alert(kodea);
+            alert(document.getElementsById("kodea").value);
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
