@@ -7,26 +7,13 @@
  
 
     <script type="text/javascript">
-        function zihurtatuEgokitasuna(){
-            var eposta,kodea,data;
-            eposta=<?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[0];
-            ?>
-            kodea=<?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[1];
-            ?>
-            data = <?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[2];
-            ?>
+        function zihurtatuEgokitasuna(a){
+            
+            var eposta,kodea,data,zatiak;
+            zatiak=a.split(";");
+            eposta=zatiak[0];
+            kodea=zatiak[1];
+            data=zatiak[2];
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
@@ -46,14 +33,15 @@
         }
     </script>
 </head>
-<body>
+<body onload="<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola') ?>">
 <?php include 'Menus.php'?>
   
   <section class="main" id="s1">
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna();">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" 
+        onclick="zihurtatuEgokitasuna('<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola');?>');">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
@@ -72,8 +60,8 @@
             if($nireSQLI->connect_error) {
                 die("DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error);
             }
-            //$pass=crypt($datuak["pasahitza"]);                //$pass==$tabladatuak[1]
-            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pasahitz."' WHERE Eposta = '".$posta."'");
+            $pass=crypt($pasahitz);
+            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pass."' WHERE Eposta = '".$posta."'");
             if ($ema){
                 echo "<script> alert('Zure pasahitza aldatu da, login pantailara eramango zaizu') </script>";
                 echo "<script type='text/javascript'> window.location='LogIn.php' </script>";
@@ -88,3 +76,23 @@
 
 ?>
 
+                        
+            <!--eposta=
+                $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $zatiak[0];
+        
+            kodea=
+                $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $zatiak[1];
+            
+            data = 
+                $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $zatiak[2];
+    
+ 
