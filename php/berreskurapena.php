@@ -8,14 +8,14 @@
 
     <script type="text/javascript">
         function zihurtatuEgokitasuna(a){
-            
             var eposta,kodea,data,zatiak;
             alert(a);
             //zatiak=a.split(";");
-            eposta=<?php $dekrypt=$_GET["i"];
+            eposta="<?php 
+                $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
-                echo $zatiak[0];?>;
+                echo $zatiak[0];?>";
             eposta=zatiak[0];
             kodea=zatiak[1];
             data=zatiak[2];
