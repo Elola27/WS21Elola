@@ -15,7 +15,7 @@
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
-                echo $atalak[0];?>";
+                echo $dekrypt?>";
             kodea="<?php 
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
