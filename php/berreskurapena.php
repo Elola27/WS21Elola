@@ -20,10 +20,13 @@
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
-                echo $atalak[1];?>";
+                echo $dekrypt;?>";
             data="<?php 
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                if (!$zatiak){
+                    echo "Gaizki";
+                }
                 $atalak=explode(";",$zatiak);
                 echo $atalak[2];?>";
             //eposta=zatiak[0];
@@ -31,6 +34,7 @@
             //data=zatiak[2];
             alert(kodea);
             alert(eposta);
+            alert(data);
             alert(document.getElementById("kodea").value);
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
                 var testua;
