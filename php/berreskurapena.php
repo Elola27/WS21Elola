@@ -43,7 +43,7 @@
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php $get=$_GET['i'];$balio=openssl_decrypt($get,'aes128','WS21Elola'); echo $balio;?>')">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php echo $_GET['i'] ;?>')">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
