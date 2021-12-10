@@ -50,8 +50,8 @@
                 //$ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".date("Y-m-d H:i:s",$timestamp)."' WHERE Eposta='".$posta."'");
                 if($mail){
                     echo "<script> alert('".$kodea."')</script>";
-                    echo "<script> alert('".$eposta."')</script>";
-                    echo "<script> alert('".$data."')</script>";
+                    echo "<script> alert('".$posta."')</script>";
+                    echo "<script> alert('".$iraungi."')</script>";
                     echo "<script> alert(Kodea bidalil da')</script>";
 
                 }else{
