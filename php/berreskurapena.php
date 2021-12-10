@@ -14,7 +14,6 @@
             eposta="<?php 
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                echo "<script> alert('".$zatiak."')</script>";
                 $atalak=explode(";",$zatiak);
                 echo $atalak[0];?>";
             eposta=zatiak[0];
