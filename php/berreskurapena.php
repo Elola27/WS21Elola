@@ -11,11 +11,16 @@
             
             var eposta,kodea,data,zatiak;
             alert(a);
-            zatiak=a.split(";");
+            //zatiak=a.split(";");
+            eposta=<?php $dekrypt=$_GET["i"];
+                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
+                $atalak=explode(";",$zatiak);
+                echo $zatiak[0];?>;
             eposta=zatiak[0];
             kodea=zatiak[1];
             data=zatiak[2];
             alert(kodea);
+            alert(eposta);
             alert(document.getElementById("kodea").value);
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
                 var testua;
