@@ -28,9 +28,8 @@
             //data=zatiak[2];
             alert(atalak[0]);
             alert(atalak[1]);
-            alert(data);
             alert(document.getElementById("kodea").value);
-            if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
+            if (document.getElementById("kodea").value==atalak[0] && atalak[1]>=date('Y-m-d H:i:s')){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
                 testua+="<h1> Bete ezazu ondorengo hau kontuaren pasahitza aldatzeko</h1>";
