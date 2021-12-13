@@ -23,6 +23,16 @@
 </html>
 
 <?php 
+
+function generateRandomString($length) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
     if (isset($_POST["posta"])){
         $posta=$_POST["posta"];
         if ($posta!= ""){
@@ -38,7 +48,7 @@
                 //echo "<script> alert('".$posta."')</script>";
                 $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
-                $kodea=md5(5).rand(10);
+                $kodea=generateRandomString(5);
                 $message.="Kodea honakoa da:".$kodea;
                 $timestamp      = time() + 60 * 60 * 24;
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
