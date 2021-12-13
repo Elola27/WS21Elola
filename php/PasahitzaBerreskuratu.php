@@ -42,8 +42,8 @@
                 $message.="Kodea honakoa da:".$kodea;
                 $timestamp      = time() + 60 * 60 * 24;
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
-                //$kripto=$posta.";".$kodea.";".$iraungi;
-                $kripto=$posta;
+                $kripto=$posta.";".$kodea.";".$iraungi;
+                //$kripto=$posta;
                 $kriptografiatua=openssl_encrypt($kripto,'aes128','WS21Elola');
                 $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/berreskurapena.php?i=$kriptografiatua'";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);
