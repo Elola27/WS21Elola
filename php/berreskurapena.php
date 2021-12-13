@@ -79,7 +79,7 @@
                 die("DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error);
             }
             $pass=crypt($pasahitz);
-            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pass."' WHERE Eposta = '".$posta."'");
+            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pass."', berreskurapen_kode='NULL', iraungitzeData='NULL' WHERE Eposta = '".$posta."'");
             if ($ema){
                 echo "<script> alert('Zure pasahitza aldatu da, login pantailara eramango zaizu') </script>";
                 echo "<script type='text/javascript'> window.location='LogIn.php' </script>";
