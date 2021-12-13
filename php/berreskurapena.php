@@ -17,7 +17,7 @@
                  if($nireSQLI->connect_error) {
                      die("DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error);
                  }
-                 $ema = $nireSQLI->query("SELECT berreskurapen_kode, iraungitzeData FROM dbt51_user WHERE Eposta = '".$posta."'");
+                 $ema = $nireSQLI->query("SELECT berreskurapen_kode, iraungitzeData FROM dbt51_user WHERE Eposta = '".openssl_decrypt($_GET['i'],'aes128','WS21Elola')."'");
                  if (($tabladatuak = $ema->fetch_row()) != null) {
                      echo $tabladatuak[0].";".$tabladatuak[1];
                  }
