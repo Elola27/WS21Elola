@@ -17,7 +17,8 @@
             if (xhro.status==200){
                 //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
                 var galdera=xhro.responseText;
-                document.getElementById("galderaeremua").innerHTML=galdera;
+                gal=galdera.split(";");
+                document.getElementById("galderaeremua").innerHTML=gal[0];
             }
         }
         xhro.open("POST","selectQuestion.php",true);
