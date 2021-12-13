@@ -88,13 +88,13 @@ function db_gorde(array $aldagaiak)
     {
         return "<b style='color: red'>DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error . "</b><br/>";
     }
-
+    
     $irudia = "";
-    /*if ($_FILES["irudia"]["tmp_name"] != "")
+    if ($_FILES["irudia"]["tmp_name"] != "")
     {
         $irudiaIzen = $_FILES["irudia"]["tmp_name"];
         $irudia = addslashes(file_get_contents($irudiaIzen));
-    }*/
+    }
 
     $sqlInsertQuestion = "INSERT INTO dbt51_questions(Eposta, Galdera, erZuzena, erOkerra1, erOkerra2, erOkerra3, Zailtasuna, Arloa, Argazkia) 
                 VALUES ('$aldagaiak[eposta]', '$aldagaiak[galdera]', '$aldagaiak[erzuzen]', '$aldagaiak[eroker1]', '$aldagaiak[eroker2]', 

@@ -68,6 +68,8 @@ function bidaliDatuak(){
     zail=document.querySelector('input[name="zailtasun"]').value;
     //zail=document.getElementById("zailtasun").value;
     arlo=document.getElementById("arlo").value;
+    irudia=document.getElementById("irudia").files[0];
+
 
     formatua=datuakegokiak();
     balioa="eposta="+eposta+"&galdera="+galdera+"&erzuzen="+erzuzen+"&eroker1="+eroker1+"&eroker2="+eroker2+"&eroker3="+eroker3+"&zail="+zail+"&arlo="+arlo;
@@ -90,6 +92,6 @@ function bidaliDatuak(){
     xhro.open("POST","../php/datuakGorde.php",true);
     xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     //xhro.send(balioa);
-    xhro.send("eposta="+eposta+"&galdera="+galdera+"&erzuzen="+erzuzen+"&eroker1="+eroker1+"&eroker2="+eroker2+"&eroker3="+eroker3+"&zail="+zail+"&arlo="+arlo);
+    xhro.send("eposta="+eposta+"&galdera="+galdera+"&erzuzen="+erzuzen+"&eroker1="+eroker1+"&eroker2="+eroker2+"&eroker3="+eroker3+"&zail="+zail+"&arlo="+arlo+"&irudia="+irudia);
     //console.log("Heldu da");
 }
