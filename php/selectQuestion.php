@@ -14,7 +14,7 @@
     echo "<p>" . $sqlInsertQuestion . "</p>";
     if ($emaitza=$nireSQLI->query($ema))
     {
-        return '<b style="color: red">Errorea: ' . $nireSQLI->error . "</b><br/>";
+        echo '<b style="color: red">Errorea: ' . $nireSQLI->error . "</b><br/>";
     }else{
         for ($x = 0; $x < $emaitza->num_rows; $x++){
             $emaitza->data_seek($x);
@@ -22,6 +22,6 @@
             //$emaitza=$datuak[0].";".$datuak[1].";".$datuak[2].";".$datuak[3].";".$datuak[4].";".$datuak[5].";".$datuak[6].";".$datuak[7].";".$datuak[8].";".$datuak[9].";".$datuak[10].";".$datuak[11];
             $emaitza=$datuak[0];
         }
-        return $emaitza;
+        echo $emaitza;
     }
 ?>
