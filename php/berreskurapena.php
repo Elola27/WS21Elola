@@ -20,8 +20,6 @@
                  $ema = $nireSQLI->query("SELECT berreskurapen_kode, iraungitzeData FROM dbt51_user WHERE Eposta = '".$posta."'");
                  if (($tabladatuak = $ema->fetch_row()) != null) {
                      echo $tabladatuak[0].";".$tabladatuak[1];
-                 }else{
-                     echo "<script> alert('Posta elektroniko horretarako erregistrorik ez dago') </script>";
                  }
                 ?>";
             atalak=explode(zatia,";");  
