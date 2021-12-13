@@ -38,7 +38,7 @@
                 //echo "<script> alert('".$posta."')</script>";
                 $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
-                $kodea=md5($posta).rand(10);
+                $kodea=md5(5).rand(10);
                 $message.="Kodea honakoa da:".$kodea;
                 $timestamp      = time() + 60 * 60 * 24;
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
