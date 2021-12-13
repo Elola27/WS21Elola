@@ -29,7 +29,11 @@
             alert(atalak[0]);
             alert(atalak[1]);
             alert(document.getElementById("kodea").value);
-            if (document.getElementById("kodea").value==atalak[0] && atalak[1]>=date('Y-m-d H:i:s')){
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+            if (document.getElementById("kodea").value==atalak[0] && atalak[1]>=dateTime){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
                 testua+="<h1> Bete ezazu ondorengo hau kontuaren pasahitza aldatzeko</h1>";
