@@ -50,15 +50,14 @@ function generateRandomString($length) {
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
                 $kodea=generateRandomString(5);
                 $message.="Kodea honakoa da:".$kodea;
-                $timestamp      = time() + 60 * 60 * 24;
+                $timestamp      = time() + 60 * 60 ;
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
-                $kripto=$posta.";".$kodea.";".$iraungi;
                 //$kripto=$posta;
-                $kriptografiatua=openssl_encrypt($kripto,'aes128','WS21Elola');
+                $kriptografiatua=openssl_encrypt($posta,'aes128','WS21Elola');
                 $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/berreskurapena.php?i=$kriptografiatua'";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);
                 
-                //$ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".date("Y-m-d H:i:s",$timestamp)."' WHERE Eposta='".$posta."'");
+                $ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".$iraungi."' WHERE Eposta='".$posta."'");
                 if($mail){
                     echo "<script> alert('".$kodea."')</script>";
                     echo "<script> alert('".$posta."')</script>";

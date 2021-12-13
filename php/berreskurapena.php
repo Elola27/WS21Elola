@@ -10,8 +10,7 @@
         function zihurtatuEgokitasuna(a){
             var eposta,kodea,data,zatiak;
             alert(a);
-            //zatiak=a.split(";");
-            eposta="<?php 
+            /*eposta="<?php 
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
@@ -28,12 +27,27 @@
                     echo openssl_error_string();
                 }
                 $atalak=explode(";",$zatiak);
-                echo $atalak;?>";
+                echo $atalak;?>";*/
+            zatia="<?php 
+                 include 'DbConfig.php';
+                 $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
+     
+                 if($nireSQLI->connect_error) {
+                     die("DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error);
+                 }
+                 $ema = $nireSQLI->query("SELECT berreskurapen_kode, iraungitzeData FROM dbt51_user WHERE Eposta = '".$posta."'");
+                 if (($tabladatuak = $ema->fetch_row()) != null) {
+                     echo $tabladatuak[0].";".$tabladatuak[1];
+                 }else{
+                     echo "<script> alert('Posta elektroniko horretarako erregistrorik ez dago') </script>";
+                 }
+                ?>";
+            atalak=explode(zatia,";");  
             //eposta=zatiak[0];
             //kodea=zatiak[1];
             //data=zatiak[2];
-            alert(kodea);
-            alert(eposta);
+            alert(atalak[0]);
+            alert(atalak[1]);
             alert(data);
             alert(document.getElementById("kodea").value);
             if (document.getElementById("kodea").value==kodea && data>=date('Y-m-d H:i:s')){
@@ -62,7 +76,7 @@
     <div id="berreskuratu">
         <label for ="kodea"> Sartu eman zaizun kodea:</label> </br>
         <input type="text" id="kodea" name="kodea"> 
-        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php echo $_GET['i'] ;?>')">
+        <input type="button" id="klik" value="Berreskuratu pasahitza" onclick="zihurtatuEgokitasuna('<?php echo openssl_decrypt($_GET['i'],'aes128','WS21Elola') ;?>')">
     </div>
   </section>
   <?php include '../html/Footer.html' ?>
