@@ -2,7 +2,7 @@
     "assessmentItems": [
         {
             "subject": "Saskibaloia",
-            "author": "oelola008@ikasle.ehu.es",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
                 "p": "Nor da onena denetan"
             },
@@ -18,64 +18,13 @@
             }
         },
         {
-            "subject": "abcd",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "afsd",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
-                "p": "Nor da onena denetan"
+                "p": "adasdfasfdafsdafsda"
             },
             "correctResponse": {
-                "response": "a"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "b",
-                    "c",
-                    "d"
-                ]
-            }
-        },
-        {
-            "subject": "itsaso",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "zer da itsaoa"
-            },
-            "correctResponse": {
-                "response": "ac"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "d",
-                    "da",
-                    "bc"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": null
-            },
-            "incorrectResponses": {
-                "response": [
-                    null,
-                    null,
-                    null
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
+                "response": "asfdas"
             },
             "incorrectResponses": {
                 "response": [
@@ -86,42 +35,42 @@
             }
         },
         {
-            "subject": "umumumumumum",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "afsd",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
-                "p": "aaaaaaaaaaaaaa"
+                "p": "adasdfasfdafsdafsda"
             },
             "correctResponse": {
-                "response": "um um um"
+                "response": "asfdas"
             },
             "incorrectResponses": {
                 "response": [
-                    "a",
-                    "aa",
-                    "aaa"
+                    "asdfdfa",
+                    "lkj",
+                    "fasdf"
                 ]
             }
         },
         {
-            "subject": "umum",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "asfdasd",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
-                "p": "umumumumumum"
+                "p": "Nor da onena denetan"
             },
             "correctResponse": {
-                "response": "umum"
+                "response": "sdfasdfa"
             },
             "incorrectResponses": {
                 "response": [
-                    "um",
-                    "umumumumum",
-                    "umum"
+                    "asfdafsdfa",
+                    "asfdasfd",
+                    "asdf"
                 ]
             }
         },
         {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "Saskibaloia",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
                 "p": "Nor da onena denetan"
             },
@@ -131,150 +80,65 @@
             "incorrectResponses": {
                 "response": [
                     "James",
-                    "lkj",
+                    "Curry",
                     "fasdf"
                 ]
             }
         },
         {
-            "subject": "umumu",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "fasfdasfd",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
                 "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "afdasfdasfd"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "asdfasd",
-                    "fasd"
-                ]
-            }
-        },
-        {
-            "subject": "asfdas",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "aaaaaaaaaaaaaaaaaaa"
             },
             "correctResponse": {
                 "response": "Michael Jordan"
             },
             "incorrectResponses": {
                 "response": [
-                    "fasf",
-                    "dsaf",
-                    "fasf"
+                    "James",
+                    "Curry",
+                    "Bryant"
                 ]
             }
         },
         {
-            "subject": "asdfasfds",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "umumum"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "um",
-                    "uuu",
-                    "mmm"
-                ]
-            }
-        },
-        {
-            "subject": "asfdasfd",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "fasfdasfd",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
                 "p": "Nor da onena denetan"
             },
             "correctResponse": {
-                "response": "umumumumu"
+                "response": "Michael Jordan"
             },
             "incorrectResponses": {
                 "response": [
-                    "mu",
-                    "mum",
-                    "ummu"
+                    "James",
+                    "Curry",
+                    "Bryant"
                 ]
             }
         },
         {
-            "subject": "fasdfas",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "fasdfasdfasdf",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
-                "p": "dfasfdadsfdas"
+                "p": "fasdfasdfasfd"
             },
             "correctResponse": {
-                "response": "fsdafdsafsdfa"
+                "response": "asdf"
             },
             "incorrectResponses": {
                 "response": [
-                    "fasdfa",
                     "asdf",
-                    "ffasdfa"
+                    "asdf",
+                    "asd"
                 ]
             }
         },
         {
-            "subject": "mum",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "jfalksjdfl\u00f1jaewfoqwfe"
-            },
-            "correctResponse": {
-                "response": "umumum"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "umu",
-                    "umu",
-                    "mum"
-                ]
-            }
-        },
-        {
-            "subject": "fadsfasfdasf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asdffasfdasdfd"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "fdasfdas",
-                    "afdsasfd",
-                    "fasfdasfd"
-                ]
-            }
-        },
-        {
-            "subject": "afsdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "adfsdafsd",
-                    "afsdfasfd",
-                    "afdsas"
-                ]
-            }
-        },
-        {
-            "subject": "fasdsdfafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
+            "subject": "Saskibaloia",
+            "author": "oelola001@ikasle.ehu.eus",
             "itemBody": {
                 "p": "Nor da onena denetan"
             },
@@ -286,499 +150,6 @@
                     "James",
                     "Curry",
                     "Bryant"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "Saskibaloia",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "umumumumu",
-            "author": "oelola008@ikasle.ehu.es",
-            "itemBody": {
-                "p": "aaaaaaaaaaaaaaaaaaaaa"
-            },
-            "correctResponse": {
-                "response": "umumumumumuum"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "umu",
-                    "umum",
-                    "umum"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "Saskibaloia",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "Curry",
-                    "Bryant"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "aaaaaaaaaaaaaaa"
-            },
-            "correctResponse": {
-                "response": "umumu"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "mum",
-                    "mumu",
-                    "umum"
-                ]
-            }
-        },
-        {
-            "subject": "a",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "mmmmmmmmmmmmmmmm"
-            },
-            "correctResponse": {
-                "response": "m"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "mmm",
-                    "mmmmm",
-                    "mmmmmmmm"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "eeeeeeeeeee"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "ae",
-                    "ae",
-                    "eae"
-                ]
-            }
-        },
-        {
-            "subject": "Saskibaloia",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "aaaa",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "aaaaaaaaaaaa"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "a",
-                    "aa",
-                    "aaa"
-                ]
-            }
-        },
-        {
-            "subject": "aaaa",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "aaaaaaaaaaaa"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "a",
-                    "aa",
-                    "aaa"
-                ]
-            }
-        },
-        {
-            "subject": "asfdas",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "aaaaaaa"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asef",
-                    "sdafd",
-                    "asfdas"
-                ]
-            }
-        },
-        {
-            "subject": "aa",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "aaaaaaaaaaaa"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "aaaaaaaaa",
-                    "aaaaaa",
-                    "aa"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "asfdas"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola001@ikasle.ehu.es",
-            "itemBody": {
-                "p": "Nor da onena denetan"
-            },
-            "correctResponse": {
-                "response": "Michael Jordan"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "asdfdfa",
-                    "Curry",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "3h4636",
-            "author": "oelola005@ikasle.ehu.es",
-            "itemBody": {
-                "p": "tgertgerhth3"
-            },
-            "correctResponse": {
-                "response": "t5h3h"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "46h346h",
-                    "36h6h634",
-                    "h634h6"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola005@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "fsadfasd"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "fasdfas",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "fdasfdafsdaf",
-            "author": "oelola005@ikasle.ehu.es",
-            "itemBody": {
-                "p": "dfasfdadsfdas"
-            },
-            "correctResponse": {
-                "response": "fsadfasd"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "fasdfas",
-                    "lkj",
-                    "fasdf"
-                ]
-            }
-        },
-        {
-            "subject": "afsdasfd",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "asdffasfdasdf"
-            },
-            "correctResponse": {
-                "response": "asdfasdfa"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "dfqdfas",
-                    "fasdfa",
-                    "fd"
-                ]
-            }
-        },
-        {
-            "subject": "345345",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "12345354354"
-            },
-            "correctResponse": {
-                "response": "3543"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "35434",
-                    "3453",
-                    "345"
-                ]
-            }
-        },
-        {
-            "subject": "345345",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "12345354354"
-            },
-            "correctResponse": {
-                "response": "fasdfdsfd"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "35434",
-                    "3453",
-                    "345"
-                ]
-            }
-        },
-        {
-            "subject": "adsfvb",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "gdhflj\u00f1k\u00f1ldfjshg"
-            },
-            "correctResponse": {
-                "response": "ghlk"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "ghlk\u00f1",
-                    "tfimkl",
-                    "tvybunjlkm"
-                ]
-            }
-        },
-        {
-            "subject": "97465988461",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "9465239864531"
-            },
-            "correctResponse": {
-                "response": "984651"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "986",
-                    "986598",
-                    "461986512"
-                ]
-            }
-        },
-        {
-            "subject": "97465988461",
-            "author": "oelola001@ikasle.ehu.eus",
-            "itemBody": {
-                "p": "9465239864531"
-            },
-            "correctResponse": {
-                "response": "a"
-            },
-            "incorrectResponses": {
-                "response": [
-                    "986",
-                    "986598",
-                    "461986512"
                 ]
             }
         }

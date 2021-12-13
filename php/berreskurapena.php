@@ -20,7 +20,7 @@
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
                 $atalak=explode(";",$zatiak);
-                echo $dekrypt;?>";
+                echo len($zatiak);?>";
             data="<?php 
                 $dekrypt=$_GET["i"];
                 $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
