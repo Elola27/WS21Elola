@@ -23,7 +23,7 @@
             $emaitza->data_seek($x);
             $datuak = $emaitza->fetch_assoc();
             $emaitza=$datuak[0].";".$datuak[1].";".$datuak[2].";".$datuak[3].";".$datuak[4].";".$datuak[5].";".$datuak[6].";".$datuak[7].";".$datuak[8].";".$datuak[9].";".$datuak[10].";".$datuak[11];
-            $emaitza=$datuak[0];
+            //$emaitza=$datuak[0];
         }
         echo $emaitza;
     }
