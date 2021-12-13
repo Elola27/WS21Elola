@@ -10,28 +10,24 @@
     <?php include 'DbConfig.php'?>
 
     <script type="text/javascript">
-        function lortuGaldera(a,b){
+        function lortuGaldera(a){
         xhro = new XMLHttpRequest();
         xhro.onreadystatechange=function(){
         //alert("Galdera gehitzen");
             if (xhro.status==200){
                 //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
-                var galdera=explode(";",xhro.responseText);
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
-                document.getElementById().innerHTML=galdera[0];
+                var galdera=xhro.responseText;
+                erantzundakoak.push(xhro.responseText);
+                document.getElementById("ezkutua").value=JSON.stringify(erantzundakoak);
+                document.getElementById("galderaeremua").innerHTML=xhro.responseText;
             }
         }
         xhro.open("POST","selectQuestion.php",true);
         xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhro.send("gaia="+a+"&erantzunda="+b);
+        //xhro.send("gaia="+a+"&erantzunda="+b);
+        erantzundakoa=document.getElementById("ezkutua").val;
+        erantzundakoak=JSON.parse(erantzundakoa);
+        xhro.send("gaia="+a+"&erantzundakoak="+erantzundakoak);
         }
     </script>
 </head>
@@ -54,10 +50,11 @@
                             $ema->data_seek($x);
                             $datuak = $ema->fetch_assoc();
                             ?>
-                            <input type='button' id='Gaia' value='<?php echo $datuak["Arloa"];?>' onclick="lortuGaldera('<?php echo $datuak['Arloa'];?>',[]);">
+                            <input type='button' id='Gaia' value='<?php echo $datuak["Arloa"];?>' onclick="lortuGaldera('<?php echo $datuak['Arloa'];?>');">
                             <?php
                         }?>
         </div>
+        <input type="hidden" id="ezkutua" value="0"/>
         <div id="galderaeremua">
             Hemen agertuko dira hautatutako gaiaren inguruko galderak
         </div>
