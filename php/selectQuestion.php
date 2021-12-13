@@ -3,12 +3,14 @@
 
     $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
 
+
+    //AND GalderaID NOT IN ('".$str."')
     if ($nireSQLI->connect_error)
     {
         return "<b style='color: red'>DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error . "</b><br/>";
     }
     $str=implode(",",$_POST["erantzundakoak"]);
-    $ema = "SELECT * FROM dbt51_questions WHERE Arloa='".$_POST["gaia"]."' AND GalderaID NOT IN ('".$str."') ORDER BY RAND() LIMIT 1;";
+    $ema = "SELECT * FROM dbt51_questions WHERE Arloa='".$_POST["gaia"]."' ORDER BY RAND() LIMIT 1;";
     echo "<p>" . $sqlInsertQuestion . "</p>";
     if ($emaitza=$nireSQLI->query($ema))
     {

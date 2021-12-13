@@ -18,8 +18,6 @@
                 //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
                 var galdera=xhro.responseText;
                 erantzundakoak.push(xhro.responseText);
-                document.getElementById("ezkutua").value=JSON.stringify(erantzundakoak);
-                document.getElementById("galderaeremua").innerHTML=xhro.responseText;
             }
         }
         xhro.open("POST","selectQuestion.php",true);
@@ -27,7 +25,7 @@
         //xhro.send("gaia="+a+"&erantzunda="+b);
         erantzundakoa=document.getElementById("ezkutua").val;
         erantzundakoak=JSON.parse(erantzundakoa);
-        xhro.send("gaia="+a+"&erantzundakoak="+erantzundakoak);
+        xhro.send("gaia="+a);
         }
     </script>
 </head>
