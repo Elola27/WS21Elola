@@ -22,7 +22,7 @@
                      echo $tabladatuak[0].";".$tabladatuak[1];
                  }
                 ?>";
-            atalak=explode(zatia,";");  
+            atalak=zatia.split(";");  
             //eposta=zatiak[0];
             //kodea=zatiak[1];
             //data=zatiak[2];
