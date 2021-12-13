@@ -1,4 +1,5 @@
 <?php
+
     include 'DbConfig.php';
 
     $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
@@ -9,11 +10,12 @@
     {
         return "<b style='color: red'>DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error . "</b><br/>";
     }
-    $str=implode(",",$_POST["erantzundakoak"]);
+    //$str=implode(",",$_POST["erantzundakoak"]);
     $ema = "SELECT * FROM dbt51_questions WHERE Arloa='".$_POST["gaia"]."' ORDER BY RAND() LIMIT 1;";
-    echo "<p>" . $sqlInsertQuestion . "</p>";
+    //echo "<p>" . $sqlInsertQuestion . "</p>";
     if ($emaitza=$nireSQLI->query($ema))
     {
+        echo "<script> console.log('".$nireSQLI->error."')</script>";
         echo '<b style="color: red">Errorea:'. $nireSQLI->error . "</b><br/>";
         echo $nireSQLI->error;
     }else{
