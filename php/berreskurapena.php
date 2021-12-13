@@ -28,7 +28,7 @@
                     echo openssl_error_string();
                 }
                 $atalak=explode(";",$zatiak);
-                echo $atalak[2];?>";
+                echo $atalak;?>";
             //eposta=zatiak[0];
             //kodea=zatiak[1];
             //data=zatiak[2];
