@@ -39,9 +39,9 @@
                 testua+="<h1> Bete ezazu ondorengo hau kontuaren pasahitza aldatzeko</h1>";
                 testua+="<input type='hidden' name='posta' value="+eposta+">";
                 testua+="<label for ='pasahitz'> Pasahitz berria:</label> ";
-                testua+="<input type='text' id='pasahitz' name='pasahitz'></br>";
+                testua+="<input type='password' id='pasahitz' name='pasahitz'></br>";
                 testua+="<label for ='kodea2'> Errepikatu pasahitza:</label> ";
-                testua+="<input type='text' id='kodea2' name='kodea2'></br>"; 
+                testua+="<input type='password' id='kodea2' name='kodea2'></br>"; 
                 testua+="<input type='submit' id='submit' value='Aldatu pasahitza'>";       
                 testua+="</form>"
                         
@@ -79,7 +79,7 @@
                 die("DB-ra konexio bat egitean errore bat egon da: " . $nireSQLI->connect_error);
             }
             $pass=crypt($pasahitz);
-            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pass."', berreskurapen_kode='NULL', iraungitzeData='NULL' WHERE Eposta = '".$posta."'");
+            $ema = $nireSQLI->query(" UPDATE dbt51_user SET Pasahitza='".$pass."', berreskurapen_kode='".NULL."', iraungitzeData='".NULL."' WHERE Eposta = '".openssl_decrypt($_GET['i'],'aes128','WS21Elola')."'");
             if ($ema){
                 echo "<script> alert('Zure pasahitza aldatu da, login pantailara eramango zaizu') </script>";
                 echo "<script type='text/javascript'> window.location='LogIn.php' </script>";
