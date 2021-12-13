@@ -53,7 +53,7 @@
                     echo "<script> alert('".$kodea."')</script>";
                     echo "<script> alert('".$posta."')</script>";
                     echo "<script> alert('".$iraungi."')</script>";
-                    echo "<script> alert(Kodea bidalil da')</script>";
+                    echo "<script> alert('Kodea bidalil da')</script>";
 
                 }else{
                     $errorMessage= error_get_last()['message'];
