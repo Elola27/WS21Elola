@@ -14,7 +14,7 @@
     echo "<p>" . $sqlInsertQuestion . "</p>";
     if ($emaitza=$nireSQLI->query($ema))
     {
-        echo '<b style="color: red">Errorea: ' . $nireSQLI->error . "</b><br/>";
+        echo '<b style="color: red">Errorea:'. $nireSQLI->error . "</b><br/>";
     }else{
         for ($x = 0; $x < $emaitza->num_rows; $x++){
             $emaitza->data_seek($x);
