@@ -17,14 +17,14 @@
             if (xhro.status==200){
                 //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
                 var galdera=xhro.responseText;
-                erantzundakoak.push(xhro.responseText);
+                document.getElementById("galderaeremua").innerHTML=galdera;
             }
         }
         xhro.open("POST","selectQuestion.php",true);
         xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //xhro.send("gaia="+a+"&erantzunda="+b);
-        erantzundakoa=document.getElementById("ezkutua").val;
-        erantzundakoak=JSON.parse(erantzundakoa);
+        //erantzundakoa=document.getElementById("ezkutua").val;
+        //erantzundakoak=JSON.parse(erantzundakoa);
         xhro.send("gaia="+a);
         }
     </script>
