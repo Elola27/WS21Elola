@@ -10,24 +10,6 @@
         function zihurtatuEgokitasuna(a){
             var eposta,kodea,data,zatiak;
             alert(a);
-            /*eposta="<?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak?>";
-            kodea="<?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo count($atalak);?>";
-            data="<?php 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                if (!$zatiak){
-                    echo openssl_error_string();
-                }
-                $atalak=explode(";",$zatiak);
-                echo $atalak;?>";*/
             zatia="<?php 
                  include 'DbConfig.php';
                  $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
