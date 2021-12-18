@@ -59,9 +59,6 @@ function generateRandomString($length) {
                 
                 $ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".$iraungi."' WHERE Eposta='".$posta."'");
                 if($mail){
-                    echo "<script> alert('".$kodea."')</script>";
-                    echo "<script> alert('".$posta."')</script>";
-                    echo "<script> alert('".$iraungi."')</script>";
                     echo "<script> alert('Kodea bidalil da')</script>";
 
                 }else{
