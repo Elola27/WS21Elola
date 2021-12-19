@@ -72,9 +72,6 @@ function generateRandomString($length) {
             echo "<script> alert('Eremu hutsa bidali da, mesedez bete') </script>";
         }
     }
-//lortu beharrezko baliok, encryptatu eta mezua mail bidali, link-a encryptauta eongoa
 
-// bi elementuk separauta . baten bidez, gero encryptatu ta link-en sartu 
-//stackoverflow.com/questions/4570980/generating-a-random-code-in-php
 
 ?>

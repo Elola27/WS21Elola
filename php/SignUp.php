@@ -177,23 +177,6 @@ if (isset($_POST['eposta'])){
     //if ($e->getCode()==23000)
       echo "<script> console.log('".$e->getMessage()."')</script>";
   }
-  
-    /*$niresqli=new mysqli($zerbitzari,$erabiltzailea,$gakoa,$db);
-    if ($niresqli->connect_errno){
-      echo"<script> alert('Konexioa ez da ireki') </script>";
-      //echo ("die('Huts egin du konexioak MySQL-ra: ('.$niresqli->connect_errno . ')'. $niresqli->connect_error);");
-    }
-    $pasahitza=crypt($pasahitz);
-    if(!$niresqli->query("INSERT INTO dbt51_user(Eposta,Deiturak,Pasahitza,Mota,Irudia,Direktorioa) VALUES ('$_POST[eposta]','$_POST[deitura]','$pasahitza','$_POST[mota]','$irudia', '$dir')")){
-      //echo"<script> alert('Dagoeneko erabiltzaile bat sortuta dago emandako datuekin (eposta berdinekoa)')</script>";  
-      $mezua = str_replace("'", "\'", $niresqli->error);
-      echo "<script>alert('Errorea datu-basean: $mezua')</script>";
-      //echo "<script> alert('Dagoeneko posta horretarako erabiltzailea sortuta dago') </script>";
-    }else{
-      echo "<script> alert('Erabiltzaile berria sortuta') </script>";
-      echo "<script type='text/javascript'> window.location='Layout.php' </script>";
-    }
-    mysqli_close($niresqli);*/
     
     }else{
       echo "<script> alert('Emandako bi pasahitzak ezberdinak dira')</script>";
@@ -202,38 +185,5 @@ if (isset($_POST['eposta'])){
     echo "<script> alert('Emandako pasahitzaren luzera 8 baino txikiagoa da') </script>";
   }
 }
-/*if (isset($_POST['mota']) && isset($_POST['eposta']) && isset($_POST['deitura']) && isset($_POST['pasahitz']) && isset($_POST['pasahitzerrepikapen'])){
-    $pasahitz=$_POST['pasahitz'];
-    $pasahitzerrepikatu=$_POST['pasahitzerrepikapen'];
-    //$preg="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
-    if(strcmp($pasahitz,$pasahitzerrepikatu)==0 && strlen($pasahitz)>=8){
-      include 'DbConfig.php';
-      $niresqli=new mysqli($zerbitzari,$erabiltzailea,$gakoa,$db);
-      if ($niresqli->connect_errno){
-        echo"<script> alert('Konexioa ez da ireki') </script>";
-        //echo ("die('Huts egin du konexioak MySQL-ra: ('.$niresqli->connect_errno . ')'. $niresqli->connect_error);");
-      }
-      $sql_Quiz = "SELECT * FROM dbt51_user WHERE Eposta='$eposta'";
 
-      $ema = $esteka-> query($sql_Quiz);
-
-      if ($ema->num_rows==0){
-        if(!$niresqli->query("INSERT INTO dbt51_user(Eposta,Deiturak,Pasahitza,Mota) VALUES ('$_POST[eposta]','$_POST[deitura]','$_POST[pasahitz]','$_POST[mota]')")){
-          echo "<script> alert('Errorea datuak sartzerako orduan:('.$niresqli->errno.')' .$niresqli->error') </script>";
-        }else{
-          //phpAlert("Erabiltailea sortu da, ongi etorri!");
-          header('location:Layout.php');
-          echo "<script> alert('Ongi etorri!, hemen sakatu hasierako orrira joateko') </script>";
-          echo "<p><a href='layout.html'> Home </a>";
-			    mysqli_close($esteka);
-        }
-      }else{
-        echo"<script>alert'Dagoeneko erabiltzailea sortuta dago'</script>";
-      }
-    }else{
-    echo "<script> echo'Pasahitzak 8ko luzera izan behar du, eta gutxienez letra xehe bat, larri bat eta zenbaki bat eraman behar ditu' </script>";
-    }
-}/*else{
-    echo "<script> alert('Arazoa dago, ez dira hutsune guztiak bete') </script>";
-}*/
 ?>

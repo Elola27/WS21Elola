@@ -25,7 +25,6 @@
         elems=null; 
         xhro = new XMLHttpRequest();
         xhro.onreadystatechange=function(){
-        //alert("Galdera gehitzen");
             if (xhro.status==200 && xhro.readyState==4){
                 //document.getElementById("galderaEremua").innerHTML=xhro.responseText;
                 var galdera=xhro.responseText;
@@ -56,17 +55,6 @@
                         '<label for="txarra">'+arr1[i]+'</label><br>';
                     }
                 }
-                
-                /*if (gal[3+arr[0]]==3){
-                     document.getElementById("radiobutton").innerHTML='<input type="radio" id="ona" name="fav_language" value='+gal[3]+'>'+
-                        '<label for="ona">'+gal[3]+'</label><br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[4+arr[0]]+'>'+
-                        '<label for="txarra">'+gal[4+arr[0]]+'</label><br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[5+arr[0]]+'>'+
-                        '<label for="txarra">'+gal[5+arr[0]]+'</label></br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[6+arr[0]]+'>'+
-                        '<label for="txarra">'+gal[6+arr[0]]+'</label>';
-                }*/
                 xhro1 = new XMLHttpRequest();
                 xhro1.onreadystatechange=function(){
                     if (xhro1.status==200 && xhro1.readyState==4){
@@ -88,14 +76,6 @@
             }
             }
         }
-        //elems=JSON.parse(document.getElementById("ezkutua").value);
-        /*elems=<?php /*session_start();
-        if (!isset($_SESSION['erantzundakoak'])){
-            echo json_encode([]);
-        }/*else{
-            echo json_encode($_SESSION['erantzundakoak']);
-        }*/?>;+*/
-            //alert("Hutsa da");
         elems=<?php 
                 if (!isset($_SESSION['erantzundakoak'])){
                     echo "[]";
