@@ -118,4 +118,30 @@
       <response>Bryant</response>
     </incorrectResponses>
   </assessmentItem>
+  <assessmentItem author="oelola001@ikasle.ehu.eus" subject="asdfas">
+    <itemBody>
+      <p>Nor da onena denetan</p>
+    </itemBody>
+    <correctResponse>
+      <response/>
+    </correctResponse>
+    <incorrectResponses>
+      <response/>
+      <response/>
+      <response/>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem author="oelola001@ikasle.ehu.eus" subject="T">
+    <itemBody>
+      <p>Kaixo nolakoa naiz ni</p>
+    </itemBody>
+    <correctResponse>
+      <response>Tonota</response>
+    </correctResponse>
+    <incorrectResponses>
+      <response>jdfal</response>
+      <response>fdjalkse</response>
+      <response>efjlq</response>
+    </incorrectResponses>
+  </assessmentItem>
 </assessmentItems>

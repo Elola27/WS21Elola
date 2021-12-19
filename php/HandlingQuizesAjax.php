@@ -26,7 +26,7 @@
     <div id="form" style="float:left">      
     <p id="galderak" ></p>
     <h5>Galdera sortzeko formularioa<br/></h5>
-    <form id="galderenF" name="galderenF" onreset="hide_image()" style="box-sizing:border-box" onsubmit="galderak()">
+    <form id="galderenF" name="galderenF" onreset="hide_image()" style="box-sizing:border-box" onsubmit="galderak()" enctype="multipart/form-data">
         <label for="eposta"> Galdera egilearen e-posta (*): </label>
         <input type="text" id="eposta" name="eposta" value=<?php echo $_SESSION['eposta']?> readonly><br>
         <label for="galdera"> Galdera testua (*): </label>

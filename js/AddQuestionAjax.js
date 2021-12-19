@@ -90,10 +90,12 @@ function bidaliDatuak(){
         return;
     }
     xhro.open("POST","../php/datuakGorde.php",true);
-    xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     //xhro.send(balioa);
-    a=new FormData();
-    a.append("irudia",irudia);
-    xhro.send("eposta="+eposta+"&galdera="+galdera+"&erzuzen="+erzuzen+"&eroker1="+eroker1+"&eroker2="+eroker2+"&eroker3="+eroker3+"&zail="+zail+"&arlo="+arlo+"&irudia="+a);
+    a=document.querySelector("form");
+    formulario=new FormData(a);
+    //a.append("irudia",irudia);
+    //xhro.send("eposta="+eposta+"&galdera="+galdera+"&erzuzen="+erzuzen+"&eroker1="+eroker1+"&eroker2="+eroker2+"&eroker3="+eroker3+"&zail="+zail+"&arlo="+arlo+);
+    xhro.send(formulario);
     //console.log("Heldu da");
 }

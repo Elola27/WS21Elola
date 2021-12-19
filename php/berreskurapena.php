@@ -33,7 +33,7 @@
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             var dateTime = date+' '+time;
-            if (document.getElementById("kodea").value==atalak[0] ){
+            if (document.getElementById("kodea").value==atalak[0]){
                 if (atalak[1]>=dateTime){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
@@ -49,6 +49,7 @@
                 document.getElementById("berreskuratu").innerHTML=testua;
                 }else{
                     alert("Iraungitze data pasa zaio kodeari");
+                }
             }else{
                 alert("Emandako kodea ez da egokia");
             }
@@ -74,7 +75,7 @@
         $pasahitz=$_POST['pasahitz'];
         $pasahitzerrepikatu=$_POST['kodea2'];
         if (strcmp($pasahitz,$pasahitzerrepikatu)==0){
-            include 'DbConfig.php';
+            if (strlen($pasahitz)>=8){
             include 'DbConfig.php';
             $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
 
@@ -87,33 +88,18 @@
                 echo "<script> alert('Zure pasahitza aldatu da, login pantailara eramango zaizu') </script>";
                 echo "<script type='text/javascript'> window.location='LogIn.php' </script>";
             }
+            }else{
+                echo "<script> alert('Pasahitzaren luzera minimoa ez du gainditzen (gutxienez 8 karaktere)') </script>";
+            }
         }else{
             echo "<script> alert('Emadako pasahitzak ezberdinak dira') </script>";
         }
     }
 
 
-//desenkriptatu eta lortu elementu bakoitza, konparatau eta zuzen badaude barrua
+
 
 ?>
 
-                        
-            <!--eposta=
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[0];
-        
-            kodea=
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[1];
-            
-            data = 
-                $dekrypt=$_GET["i"];
-                $zatiak=openssl_decrypt($dekrypt,'aes128','WS21Elola');
-                $atalak=explode(";",$zatiak);
-                echo $zatiak[2];
     
  

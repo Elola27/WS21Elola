@@ -49,7 +49,7 @@ function generateRandomString($length) {
                 $message="Mezu hau eskatu da zure Quizz-eko kontuko pasahitza berrezartzeko. \n";
                 $message.="Jarraian agertzen den link-ean klik eginik hemen jasoko duzun kodea sartu eta pasahitza aldatzeko aukera emango dizu \n";
                 $kodea=generateRandomString(5);
-                $message.="Kodea honakoa da:".$kodea;
+                $message.="Kodea honakoa da:".$kodea."\n";
                 $timestamp      = time() + 60 * 60 ;
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
                 //$kripto=$posta;

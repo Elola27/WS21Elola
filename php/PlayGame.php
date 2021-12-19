@@ -20,9 +20,9 @@
                 }else{
                     echo implode(", " ,$_SESSION["erantzundakoak"]);
                 }?>;";
+        
         function lortuGaldera(a){ 
         elems=null; 
-        
         xhro = new XMLHttpRequest();
         xhro.onreadystatechange=function(){
         //alert("Galdera gehitzen");
@@ -36,21 +36,36 @@
                 document.getElementById("hautatugaia").innerHTML=a;
                 document.getElementById("GaiEzkutua").value=a;
                 document.getElementById("galderatestua").innerHTML=gal[0]+".-"+gal[2];
-                if (gal[8]===""){
+                if (gal[7]===""){
                     document.getElementById("irudia").src="../images/default_argazkia.png";
                 }else{
-                    document.getElementById("irudia").src=gal[7];
+                    document.getElementById("irudia").src="data:image/*;base64,"+gal[7];
                 }
                 document.getElementById("gaiak").style.visibility="hidden";
                 document.getElementById("Egile").innerHTML=gal[1];
-                document.getElementById("radiobutton").innerHTML='<input type="radio" id="ona" name="fav_language" value='+gal[3]+'>'+
+                document.getElementById("radiobutton").innerHTML="";
+                arr1=[gal[3],gal[4],gal[5],gal[6]];
+                alert(arr1);
+                arr1.sort(function() {return Math.random() - 0.5});
+                for (var i=0; i<arr1.length;i++){
+                    if (arr1[i]==gal[3]){
+                        document.getElementById("radiobutton").innerHTML+='<input type="radio" id="ona" name="fav_language" value='+arr1[i]+'>'+
+                        '<label for="ona">'+arr1[i]+'</label><br>';
+                    }else{
+                        document.getElementById("radiobutton").innerHTML+='<input type="radio" id="txarra" name="fav_language" value='+arr1[i]+'>'+
+                        '<label for="txarra">'+arr1[i]+'</label><br>';
+                    }
+                }
+                /*if (gal[3+arr[0]]==3){
+                     document.getElementById("radiobutton").innerHTML='<input type="radio" id="ona" name="fav_language" value='+gal[3]+'>'+
                         '<label for="ona">'+gal[3]+'</label><br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[4]+'>'+
-                        '<label for="txarra">'+gal[4]+'</label><br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[5]+'>'+
-                        '<label for="txarra">'+gal[5]+'</label></br>'+
-                        '<input type="radio" id="txarra" name="fav_language" value='+gal[6]+'>'+
-                        '<label for="txarra">'+gal[6]+'</label>';
+                        '<input type="radio" id="txarra" name="fav_language" value='+gal[4+arr[0]]+'>'+
+                        '<label for="txarra">'+gal[4+arr[0]]+'</label><br>'+
+                        '<input type="radio" id="txarra" name="fav_language" value='+gal[5+arr[0]]+'>'+
+                        '<label for="txarra">'+gal[5+arr[0]]+'</label></br>'+
+                        '<input type="radio" id="txarra" name="fav_language" value='+gal[6+arr[0]]+'>'+
+                        '<label for="txarra">'+gal[6+arr[0]]+'</label>';
+                }*/
                 xhro1 = new XMLHttpRequest();
                 xhro1.onreadystatechange=function(){
                     if (xhro1.status==200 && xhro1.readyState==4){

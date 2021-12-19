@@ -1,4 +1,5 @@
 <?php
+header("Content-type: multipart/form-data");
 function eremuakKonprobatu($datuak)
 {
     if (!preg_match("/^(([a-zA-Z]+[0-9]{3}@ikasle\.ehu\.(eus|es))|([a-zA-Z]+\.[a-zA-Z]+@ehu\.(eus|es)|[a-zA-Z]+@ehu\.(eus|es)))$/i", $datuak["eposta"]))
@@ -9,23 +10,23 @@ function eremuakKonprobatu($datuak)
     {
         return 'Galdera testua oso motza';
     }
-    else if (!ezHutsaVal($datuak["erzuzen"]))
+    else if (!ezHutsaVal($datuak["zuzen"]))
     {
         return 'Erantzun zuzena hutsa da';
     }
-    else if (!ezHutsaVal($datuak["eroker1"]))
+    else if (!ezHutsaVal($datuak["oker1"]))
     {
         return '1. erantzun okerra hutsa da';
     }
-    else if (!ezHutsaVal($datuak["eroker2"]))
+    else if (!ezHutsaVal($datuak["oker2"]))
     {
         return '2. erantzun okerra hutsa da';
     }
-    else if (!ezHutsaVal($datuak["eroker3"]))
+    else if (!ezHutsaVal($datuak["oker3"]))
     {
         return '3. erantzun okerra hutsa da';
     }
-    else if (!(1 <= $datuak["zail"] && $datuak["zail"] <= 3))
+    else if (!(1 <= $datuak["zailtasun"] && $datuak["zailtasun"] <= 3))
     {
         return 'Zailtasuna okerra da';
     }
@@ -97,8 +98,8 @@ function db_gorde(array $aldagaiak)
     }
 
     $sqlInsertQuestion = "INSERT INTO dbt51_questions(Eposta, Galdera, erZuzena, erOkerra1, erOkerra2, erOkerra3, Zailtasuna, Arloa, Argazkia) 
-                VALUES ('$aldagaiak[eposta]', '$aldagaiak[galdera]', '$aldagaiak[erzuzen]', '$aldagaiak[eroker1]', '$aldagaiak[eroker2]', 
-                        '$aldagaiak[eroker3]', '$aldagaiak[zail]', '$aldagaiak[arlo]', '$irudia')";
+                VALUES ('$aldagaiak[eposta]', '$aldagaiak[galdera]', '$aldagaiak[zuzen]', '$aldagaiak[oker1]', '$aldagaiak[oker2]', 
+                        '$aldagaiak[oker3]', '$aldagaiak[zailtasun]', '$aldagaiak[arlo]', '$irudia')";
 
     if (!$nireSQLI->query($sqlInsertQuestion))
     {
@@ -123,11 +124,11 @@ function xml_gorde(array $aldagaiak)
     $galdetegiaItem->addChild('itemBody')
         ->addChild('p', $aldagaiak["galdera"]);
     $galdetegiaItem->addChild('correctResponse')
-        ->addChild('response', $aldagaiak["erzuzen"]);
+        ->addChild('response', $aldagaiak["zuzen"]);
     $erantzunOkerrak = $galdetegiaItem->addChild('incorrectResponses');
-    $erantzunOkerrak->addChild('response', $aldagaiak["eroker1"]);
-    $erantzunOkerrak->addChild('response', $aldagaiak["eroker2"]);
-    $erantzunOkerrak->addChild('response', $aldagaiak["eroker3"]);
+    $erantzunOkerrak->addChild('response', $aldagaiak["oker1"]);
+    $erantzunOkerrak->addChild('response', $aldagaiak["oker2"]);
+    $erantzunOkerrak->addChild('response', $aldagaiak["oker3"]);
 
     $domxml = new DOMDocument('1.0');
     $domxml->preserveWhiteSpace = false;
@@ -153,11 +154,11 @@ function json_gorde(array $aldagaiak)
         ->itemBody->p = $aldagaiak["galdera"];
     $galdetegia->correctResponse = new stdClass();
     $galdetegia
-        ->correctResponse->response = $aldagaiak["erzuzen"];
+        ->correctResponse->response = $aldagaiak["zuzen"];
     $erantzunoker = array(
-        $aldagaiak["eroker1"],
-        $aldagaiak["eroker2"],
-        $aldagaiak["eroker3"]
+        $aldagaiak["oker1"],
+        $aldagaiak["oker2"],
+        $aldagaiak["oker3"]
     );
     $galdetegia->incorrectResponses = new stdClass();
     $galdetegia

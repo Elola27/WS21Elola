@@ -46,7 +46,7 @@
         if ($emaitza->num_rows==1){
             $emaitza->data_seek(0);
             $datuak = $emaitza->fetch_assoc();
-            $emaitz=$datuak["GalderaID"].";".$datuak["Eposta"].";".$datuak["Galdera"].";".$datuak["erZuzena"].";".$datuak["erOkerra1"].";".$datuak["erOkerra2"].";".$datuak["erOkerra3"].";".$datuak["Argazkia"].";".$ema;
+            $emaitz=$datuak["GalderaID"].";".$datuak["Eposta"].";".$datuak["Galdera"].";".$datuak["erZuzena"].";".$datuak["erOkerra1"].";".$datuak["erOkerra2"].";".$datuak["erOkerra3"].";". base64_encode($datuak["Argazkia"]);
         }else{
             $emaitz="Ez dago galdera gehiago datu-basean";
         }
