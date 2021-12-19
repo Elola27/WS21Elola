@@ -168,7 +168,7 @@ if (isset($_POST['eposta'])){
       }else{
 
         echo "<script> console.log('".$stmt->queryString."')</script>";
-
+        echo "<script> alert('Errorea sortzerakoan')</script>";
         echo "<script> console.log('".$stmt->errorCode()."')</script>";
         echo "<script> console.log('".$dbh->errorInfo()."')</script>";
       }
