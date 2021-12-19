@@ -77,7 +77,7 @@
                 xhro1.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                 xhro1.send("id="+gal[0]);
             }else{
-                alert("Ez dago galdera gehiago aukeratzeko aukerarik, mesedez sakatu Amaitu saiakera botoian");
+                alert("Ez dago gai honetan galdera gehiago erantzuterik, dagoeneko guztiak erantzun dituzu");
                 document.getElementById("Hurrengoa").disabled=true;
                 document.getElementById("Konprobatu").disabled=true;
                 //document.getElementById("ona").style.disabled=true;
