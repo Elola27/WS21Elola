@@ -171,7 +171,6 @@ if (isset($_POST['eposta'])){
 
         echo "<script> console.log('".$stmt->errorCode()."')</script>";
         echo "<script> console.log('".$dbh->errorInfo()."')</script>";
-        //echo "<script> console.log('".$dbh->errorInfo()."') </script>"; 
       }
       $dbh=null;
   }catch(PDOException $e){

@@ -23,12 +23,6 @@
                  }
                 ?>";
             atalak=zatia.split(";");  
-            //eposta=zatiak[0];
-            //kodea=zatiak[1];
-            //data=zatiak[2];
-            alert(atalak[0]);
-            alert(atalak[1]);
-            alert(document.getElementById("kodea").value);
             var today = new Date();
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
