@@ -145,6 +145,8 @@
             document.getElementById("Hutsak").innerHTML=0;
             document.getElementById("Asmatuak").innerHTML=0;
             document.getElementById("hautatugaia").innerHTML="";
+            document.getElementById("Hurrengoa").disabled=true;
+            document.getElementById("Konprobatu").disabled=true;
             alert(testua);
 
         }
