@@ -45,7 +45,6 @@
                 document.getElementById("Egile").innerHTML=gal[1];
                 document.getElementById("radiobutton").innerHTML="";
                 arr1=[gal[3],gal[4],gal[5],gal[6]];
-                alert(gal[3]);
                 arr1.sort(function() {return Math.random() - 0.5});
                 document.getElementById("soluzioa").value=gal[3];
                 for (var i=0; i<arr1.length;i++){
@@ -78,6 +77,7 @@
                 xhro1.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                 xhro1.send("id="+gal[0]);
             }else{
+                alert("Ez dago galdera gehiago aukeratzeko aukerarik, mesedez sakatu Amaitu saiakera botoian");
                 document.getElementById("Hurrengoa").disabled=true;
                 document.getElementById("Konprobatu").disabled=true;
                 //document.getElementById("ona").style.disabled=true;
