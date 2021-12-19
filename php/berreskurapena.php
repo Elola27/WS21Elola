@@ -9,7 +9,6 @@
     <script type="text/javascript">
         function zihurtatuEgokitasuna(a){
             var eposta,kodea,data,zatiak;
-            alert(a);
             zatia="<?php 
                  include 'DbConfig.php';
                  $nireSQLI = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
