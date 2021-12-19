@@ -45,17 +45,19 @@
                 document.getElementById("Egile").innerHTML=gal[1];
                 document.getElementById("radiobutton").innerHTML="";
                 arr1=[gal[3],gal[4],gal[5],gal[6]];
-                alert(arr1);
+                alert(gal[3]);
                 arr1.sort(function() {return Math.random() - 0.5});
+                document.getElementById("soluzioa").value=gal[3];
                 for (var i=0; i<arr1.length;i++){
                     if (arr1[i]==gal[3]){
-                        document.getElementById("radiobutton").innerHTML+='<input type="radio" id="ona" name="fav_language" value='+arr1[i]+'>'+
+                        document.getElementById("radiobutton").innerHTML+='<input type="radio" id="ona" name="fav_language" value='+gal[3]+'>'+
                         '<label for="ona">'+arr1[i]+'</label><br>';
                     }else{
                         document.getElementById("radiobutton").innerHTML+='<input type="radio" id="txarra" name="fav_language" value='+arr1[i]+'>'+
                         '<label for="txarra">'+arr1[i]+'</label><br>';
                     }
                 }
+                
                 /*if (gal[3+arr[0]]==3){
                      document.getElementById("radiobutton").innerHTML='<input type="radio" id="ona" name="fav_language" value='+gal[3]+'>'+
                         '<label for="ona">'+gal[3]+'</label><br>'+
@@ -69,16 +71,13 @@
                 xhro1 = new XMLHttpRequest();
                 xhro1.onreadystatechange=function(){
                     if (xhro1.status==200 && xhro1.readyState==4){
-                         alert(xhro1.responseText);
                         elems1=xhro1.responseText;
-                        alert(elems1);
                     }
                 }
                 xhro1.open("POST","aldatuSesioBalioa.php",true);
                 xhro1.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                 xhro1.send("id="+gal[0]);
             }else{
-                alert(xhro.responseText);
                 document.getElementById("Hurrengoa").disabled=true;
                 document.getElementById("Konprobatu").disabled=true;
                 //document.getElementById("ona").style.disabled=true;
@@ -106,8 +105,6 @@
         if (elems1!=null){
             elems=elems1;
         }
-        alert(elems1);
-        alert(elems);
         xhro.open("POST","selectQuestion.php",true);
         xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //xhro.send("gaia="+a+"&erantzunda="+b);
@@ -130,29 +127,11 @@
                 x=parseInt(document.getElementById("Asmatuak").innerHTML,10);
                 document.getElementById("Asmatuak").innerHTML= x+ 1;
             }else{
-                console.log(document.getElementById("ona").value);
-                document.getElementById("erantzuna").innerHTML="Ez duzu asmatu, erantzun zuzena honakoa da:<br>" + document.getElementById("ona").value;
+                document.getElementById("erantzuna").innerHTML="Ez duzu asmatu, erantzun zuzena honakoa da: " + document.getElementById("soluzioa").value;
                 x=parseInt(document.getElementById("Hutsak").innerHTML,10);
                 document.getElementById("Hutsak").innerHTML= x+ 1;
             }
             document.getElementById("Konprobatu").disabled=true;
-            //xhro1 = new XMLHttpRequest();
-            /*id=document.getElementById("galderatestua").innerHTML
-            id=id.split(".-");
-            id=id[0];
-            /*xhro1.open("POST","aldatuSesioBalioa.php",false);
-            xhro1.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xhro1.send("id="+id);
-            $.ajax({
-                type:"POST",
-                url:"aldatuSesioBalioa.php",
-                data:"id="+id,
-                success:function(){
-                    alert("Ongi joan da");
-                },
-                async:false,
-            });*/
-
         }
 
         function amaituSaiakera(){
@@ -200,6 +179,7 @@
         <b> Asmatuak: <span id="Asmatuak">0</span></b>
         <b> Huts egindakoak:<span id="Hutsak">0</span> </b>    
         </p>            
+        <input type="hidden" id="soluzioa"/>
         <input type="hidden" id="GaiEzkutua"/>
         <input type="hidden" id="ezkutua" value="[]"/>
         <input type="button" value="Amaitu saiakera" onclick="amaituSaiakera();">
