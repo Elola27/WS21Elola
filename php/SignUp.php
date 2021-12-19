@@ -12,7 +12,7 @@
 <script src="../js/ShowImageInForm.js"></script>
   <script  language="JavaScript">
          function egiaztatuMatrikula(){
-          /*eposta=document.getElementById("eposta").value;
+          eposta=document.getElementById("eposta").value;
           xhro = new XMLHttpRequest();
           xhro.onreadystatechange=function(){
         //alert("Galdera gehitzen");
@@ -36,7 +36,6 @@
           xhro.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           xhro.send("");
           //document.getElementById("submit").disabled=false;
-          */
           document.getElementById("submit").disabled=false;
         }
           $(document).ready(function(){
