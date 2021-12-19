@@ -54,7 +54,7 @@ function generateRandomString($length) {
                 $iraungi=date("Y-m-d H:i:s",$timestamp);
                 //$kripto=$posta;
                 $kriptografiatua=openssl_encrypt($posta,'aes128','WS21Elola');
-                $message.="<a href='sw.ikasten.io/~oelola001/WS21Elola/php/berreskurapena.php?i=$kriptografiatua'";
+                $message.="sw.ikasten.io/~oelola001/WS21Elola/php/berreskurapena.php?i=$kriptografiatua";
                 $mail=mail($posta,'Pasahitz berreskurapena',$message);
                 
                 $ema2=$nireSQLI->query("UPDATE dbt51_user SET berreskurapen_kode='".$kodea."',iraungitzeData='".$iraungi."' WHERE Eposta='".$posta."'");

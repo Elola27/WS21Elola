@@ -33,7 +33,8 @@
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             var dateTime = date+' '+time;
-            if (document.getElementById("kodea").value==atalak[0] && atalak[1]>=dateTime){
+            if (document.getElementById("kodea").value==atalak[0] ){
+                if (atalak[1]>=dateTime){
                 var testua;
                 testua="<form id=berria action='' method='post'>";
                 testua+="<h1> Bete ezazu ondorengo hau kontuaren pasahitza aldatzeko</h1>";
@@ -46,6 +47,8 @@
                 testua+="</form>"
                         
                 document.getElementById("berreskuratu").innerHTML=testua;
+                }else{
+                    alert("Iraungitze data pasa zaio kodeari");
             }else{
                 alert("Emandako kodea ez da egokia");
             }

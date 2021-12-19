@@ -21,9 +21,6 @@
         echo '<span class="right"><a href="SignUp.php">Erregistratu</a></span> &nbsp;';
         echo '<span class="right"><a href="LogIn.php">Login</a></span> &nbsp;';
         echo '<span class="right"><a href="PasahitzaBerreskuratu.php">Pasahitza ahaztu zait</a></span> &nbsp;';
-        echo '<script src="https://apis.google.com/js/platform.js" async defer></script>';
-        echo '<meta name="google-signin-client_id" content="100680261104;rh58g3scanp5kv5kq6u1h94jjp9ig10g.apps.googleusercontent.com">';
-        echo '<div class="g-signin2" data-onsuccess="onSignIn"></div>';
         echo 'Anonimoa &nbsp;';
         echo '<img src="../images/erabiltzaile_anonimoa.png" height=50 width=50"/>';
     }
@@ -53,7 +50,7 @@
             echo '<span><a href="ShowVips.php'.$parametroak.'">Zerrendatu VIP</a></span>';
         }
     }*/
-    echo '<span><a href="PlayGame.php">Galderak erantzun</a></span>';
+    
     if (isset($_SESSION['rola'])){
     if ($_SESSION['rola']=='Ikaslea'){
         echo '<span><a href="HandlingQuizesAjax.php">AJAX galderak kudeatu</a></span>';
@@ -68,6 +65,8 @@
         echo '<span><a href="HandlingAccounts.php">Kontuak maneiatu</a></span>';
         }
     }   
+    }else{
+        echo '<span><a href="PlayGame.php">Galderak erantzun</a></span>';
     }
     echo '<span><a href="Credits.php">Kredituak</a></span>';
     ?>
